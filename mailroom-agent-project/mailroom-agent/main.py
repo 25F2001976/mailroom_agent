@@ -265,6 +265,7 @@ def resolve_proposals(dossiers: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
 
 
 @app.post("/")
+@app.post("/v1/mailroom/actions")
 async def handle_request(req: Request):
     try:
         body = await req.json()
